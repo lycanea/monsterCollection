@@ -39,7 +39,7 @@ function renderCollection() {
 		card.id = item.name;
 		const safeId = 'collected_' + encodeURIComponent(item.name);
 		card.innerHTML = `
-			<img class="monster-img" src="${item.image}" alt="${item.name}">
+			<img class="monster-img" src="/monsterCollection/${item.image}" alt="${item.name}">
 			<h3>${item.name}</h3>
 			<p>Rarity: ${item.rarity}</p>
 			<p>Type: ${item.category}</p>
