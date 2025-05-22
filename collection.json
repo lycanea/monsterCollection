@@ -1,0 +1,44 @@
+{
+    "zero": {
+        "name": "Zero",
+        "category": "Ultra",
+        "rarity": "Common",
+        "image": "/images/zero.webp"
+    },
+    "fiesta": {
+        "name": "Fiesta",
+        "category": "Ultra",
+        "rarity": "Common",
+        "image": "/images/fiesta.webp"
+    },
+    "gold": {
+        "name": "Gold",
+        "category": "Ultra",
+        "rarity": "Common",
+        "image": "/images/gold.webp"
+    },
+    "paradise": {
+        "name": "Paradise",
+        "category": "Ultra",
+        "rarity": "Common",
+        "image": "/images/paradise.webp"
+    },
+    "rosa": {
+        "name": "Rosa",
+        "category": "Ultra",
+        "rarity": "Common",
+        "image": "/images/rosa.webp"
+    },
+    "peachy_keen": {
+        "name": "Peachy Keen",
+        "category": "Ultra",
+        "rarity": "Common",
+        "image": "/images/peachy_keen.webp"
+    },
+    "strawberry_dreams": {
+        "name": "Strawberry Dreams",
+        "category": "Ultra",
+        "rarity": "Common",
+        "image": "/images/strawberry_dreams.webp"
+    }
+}
