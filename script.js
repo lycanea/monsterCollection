@@ -6,81 +6,96 @@ let collectionData = [];
 
 const collected = localStorage.getItem('collected') === null ? localStorage.setItem('collected', JSON.stringify({})) : null;
 
+// Filter states
+const collectedStates = ['All', 'Collected', 'Uncollected'];
+const typeStates = ['All', 'Ultra', 'Regular', 'Reserve', 'Java', 'Triple Shot', 'Juice', 'Rehab'];
+const rarityStates = ['All', 'Common', 'Rare', 'Special'];
+let collectedState = 0;
+let typeState = 0;
+let rarityState = 0;
+
+// Render function
+function renderCollection() {
+	collection.innerHTML = '';
+	const collectedData = JSON.parse(localStorage.getItem('collected')) || {};
+	Object.values(collectionData).forEach(item => {
+		// Filtering logic
+		const isCollected = !!collectedData[item.name];
+		if (
+			(collectedStates[collectedState] === 'Collected' && !isCollected) ||
+			(collectedStates[collectedState] === 'Uncollected' && isCollected)
+		) return;
+		if (
+			typeStates[typeState] !== 'All' &&
+			item.category !== typeStates[typeState]
+		) return;
+		if (
+			rarityStates[rarityState] !== 'All' &&
+			item.rarity !== rarityStates[rarityState]
+		) return;
+
+		const card = document.createElement('div');
+		card.className = 'card';
+		card.id = item.name;
+		const safeId = 'collected_' + encodeURIComponent(item.name);
+		card.innerHTML = `
+			<img class="monster-img" src="${item.image}" alt="${item.name}">
+			<h3>${item.name}</h3>
+			<p>Rarity: ${item.rarity}</p>
+			<p>Type: ${item.category}</p>
+			<input type="checkbox" id="${safeId}" name="${safeId}" value="collected">
+			<label for="${safeId}"> Collected</label><br>
+		`;
+		collection.appendChild(card);
+
+		const checkbox = card.querySelector(`#${CSS.escape(safeId)}`);
+		if (checkbox) {
+			checkbox.checked = isCollected;
+			checkbox.addEventListener('change', function() {
+				const collectedData = JSON.parse(localStorage.getItem('collected')) || {};
+				if (this.checked) {
+					collectedData[item.name] = true;
+				} else {
+					delete collectedData[item.name];
+				}
+				localStorage.setItem('collected', JSON.stringify(collectedData));
+				renderCollection(); // re-render on change
+			});
+		}
+	});
+}
+
 fetch('collection.json')
 	.then(response => response.json())
 	.then(data => {
 		collectionData = data;
-		// You can now use collectionData as needed
-		Object.values(data).forEach(item => {
-			const card = document.createElement('div');
-			card.className = 'card';
-			card.id = item.name;
-
-			// Create a safe ID by encoding the name
-			const safeId = 'collected_' + encodeURIComponent(item.name);
-
-			card.innerHTML = `
-				<img class="monster-img" src="${item.image}" alt="${item.name}">
-				<h3>${item.name}</h3>
-				<p>Rarity: ${item.rarity}</p>
-				<p>Type: ${item.category}</p>
-				<input type="checkbox" id="${safeId}" name="${safeId}" value="collected">
-				<label for="${safeId}"> Collected</label><br>
-			`;
-			collection.appendChild(card);
-			
-			const checkbox = card.querySelector(`#${CSS.escape(safeId)}`);
-			if (checkbox) {
-				checkbox.checked = JSON.parse(localStorage.getItem('collected'))[item.name] || false;
-				checkbox.addEventListener('change', function() {
-					console.log(`${item.name} checkbox is now ${this.checked ? 'checked' : 'unchecked'}`);
-					const collectedData = JSON.parse(localStorage.getItem('collected')) || {};
-					if (this.checked) {
-						collectedData[item.name] = true;
-					} else {
-						delete collectedData[item.name];
-					}
-					localStorage.setItem('collected', JSON.stringify(collectedData));
-				});
-			}
-		});
+		renderCollection();
 	})
 	.catch(error => {
 		console.error('Error loading collection.json:', error);
 	});
 
-
-
 if (collectedFilter) {
-	const states = ['All', 'Collected', 'Uncollected'];
-	let currentState = 0;
-
-	collectedFilter.textContent = 'Collected: ' + states[currentState];
-
+	collectedFilter.textContent = 'Collected: ' + collectedStates[collectedState];
 	collectedFilter.addEventListener('click', function () {
-		currentState = (currentState + 1) % states.length;
-		this.textContent = 'Filter: ' + states[currentState];
+		collectedState = (collectedState + 1) % collectedStates.length;
+		this.textContent = 'Collected: ' + collectedStates[collectedState];
+		renderCollection();
 	});
 }
 if (typeFilter) {
-	const states = ['All', 'Ultra', 'Regular', 'Juice'];
-	let currentState = 0;
-
-	typeFilter.textContent = 'Type: ' + states[currentState];
-
+	typeFilter.textContent = 'Type: ' + typeStates[typeState];
 	typeFilter.addEventListener('click', function () {
-		currentState = (currentState + 1) % states.length;
-		this.textContent = 'Type: ' + states[currentState];
+		typeState = (typeState + 1) % typeStates.length;
+		this.textContent = 'Type: ' + typeStates[typeState];
+		renderCollection();
 	});
 }
 if (rarityFilter) {
-	const states = ['All', 'Common', 'Rare', 'Special'];
-	let currentState = 0;
-
-	rarityFilter.textContent = 'Rarity: ' + states[currentState];
-
+	rarityFilter.textContent = 'Rarity: ' + rarityStates[rarityState];
 	rarityFilter.addEventListener('click', function () {
-		currentState = (currentState + 1) % states.length;
-		this.textContent = 'Rarity: ' + states[currentState];
+		rarityState = (rarityState + 1) % rarityStates.length;
+		this.textContent = 'Rarity: ' + rarityStates[rarityState];
+		renderCollection();
 	});
 }

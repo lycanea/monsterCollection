@@ -40,5 +40,239 @@
         "category": "Ultra",
         "rarity": "Common",
         "image": "/images/strawberry_dreams.webp"
+    },
+    "vice_guava": {
+        "name": "Vice Guava",
+        "category": "Ultra",
+        "rarity": "Rare",
+        "image": "/images/vice_guava.webp"
+    },
+    "fantasy_ruby_red": {
+        "name": "Fantasy Ruby Red",
+        "category": "Ultra",
+        "rarity": "Rare",
+        "image": "/images/fantasy_ruby_red.webp"
+    },
+    "watermelon": {
+        "name": "Watermelon",
+        "category": "Ultra",
+        "rarity": "Rare",
+        "image": "/images/watermelon.webp"
+    },
+    "sunrise": {
+        "name": "Sunrise",
+        "category": "Ultra",
+        "rarity": "Rare",
+        "image": "/images/sunrise.webp"
+    },
+    "violet": {
+        "name": "Violet",
+        "category": "Ultra",
+        "rarity": "Rare",
+        "image": "/images/violet.webp"
+    },
+    "red": {
+        "name": "Red",
+        "category": "Ultra",
+        "rarity": "Rare",
+        "image": "/images/red.webp"
+    },
+    "blue": {
+        "name": "Blue",
+        "category": "Ultra",
+        "rarity": "Rare",
+        "image": "/images/blue.webp"
+    },
+    "black": {
+        "name": "Black",
+        "category": "Ultra",
+        "rarity": "Rare",
+        "image": "/images/black.webp"
+    },
+    "blue_hawaii": {
+        "name": "Blue Hawaii",
+        "category": "Ultra",
+        "rarity": "Rare",
+        "image": "/images/blue_hawaii.webp"
+    },
+    "regular": {
+        "name": "Regular",
+        "category": "Regular",
+        "rarity": "Common",
+        "image": "/images/regular.webp"
+    },
+    "import": {
+        "name": "Import",
+        "category": "Regular",
+        "rarity": "Rare",
+        "image": "/images/import.webp"
+    },
+    "zero_sugar": {
+        "name": "Zero Sugar",
+        "category": "Regular",
+        "rarity": "Common",
+        "image": "/images/zero_sugar.webp"
+    },
+    "white_pineapple": {
+        "name": "White Pineapple",
+        "category": "Reserve",
+        "rarity": "Rare",
+        "image": "/images/white_pineapple.webp"
+    },
+    "orange_dreamsicle": {
+        "name": "Orange Dreamsicle",
+        "category": "Reserve",
+        "rarity": "Rare",
+        "image": "/images/orange_dreamsicle.webp"
+    },
+    "peaches_and_cream": {
+        "name": "Peaches and Cream",
+        "category": "Reserve",
+        "rarity": "Rare",
+        "image": "/images/peaches_and_cream.webp"
+    },
+    "low_carb": {
+        "name": "Low Carb",
+        "category": "Regular",
+        "rarity": "Rare",
+        "image": "/images/low_carb.webp"
+    },
+    "nitro": {
+        "name": "Nitro",
+        "category": "Regular",
+        "rarity": "Rare",
+        "image": "/images/nitro.webp"
+    },
+    "assault": {
+        "name": "Assault",
+        "category": "Regular",
+        "rarity": "Rare",
+        "image": "/images/assault.webp"
+    },
+    "mean_bean": {
+        "name": "Mean Bean",
+        "category": "Java",
+        "rarity": "Rare",
+        "image": "/images/mean_bean.webp"
+    },
+    "loca_moca": {
+        "name": "Loca Moca",
+        "category": "Java",
+        "rarity": "Rare",
+        "image": "/images/loca_moca.webp"
+    },
+    "salted_caramel": {
+        "name": "Salted Caramel",
+        "category": "Java",
+        "rarity": "Rare",
+        "image": "/images/salted_caramel.webp"
+    },
+    "irish_creme": {
+        "name": "Irish Creme",
+        "category": "Java",
+        "rarity": "Rare",
+        "image": "/images/irish_creme.webp"
+    },
+    "cafe_latte": {
+        "name": "Cafe Latte",
+        "category": "Java",
+        "rarity": "Rare",
+        "image": "/images/cafe_latte.webp"
+    },
+    "mean_bean_triple": {
+        "name": "Mean Bean Triple Shot",
+        "category": "Triple Shot",
+        "rarity": "Rare",
+        "image": "/images/mean_bean_triple.webp"
+    },
+    "loca_moca_triple": {
+        "name": "Loca Moca Triple Shot",
+        "category": "Triple Shot",
+        "rarity": "Rare",
+        "image": "/images/loca_moca_triple.webp"
+    },
+    "french_vanilla": {
+        "name": "French Vanilla",
+        "category": "Triple Shot",
+        "rarity": "Rare",
+        "image": "/images/french_vanilla.webp"
+    },
+    "mocha": {
+        "name": "Mocha",
+        "category": "Triple Shot",
+        "rarity": "Rare",
+        "image": "/images/mocha.webp"
+    },
+    "mango_loco": {
+        "name": "Mango Loco",
+        "category": "Juice",
+        "rarity": "Common",
+        "image": "/images/mango_loco.webp"
+    },
+    "pacific_punch": {
+        "name": "Pacific Punch",
+        "category": "Juice",
+        "rarity": "Common",
+        "image": "/images/pacific_punch.webp"
+    },
+    "pipeline_punch": {
+        "name": "Pipeline Punch",
+        "category": "Juice",
+        "rarity": "Common",
+        "image": "/images/pipeline_punch.webp"
+    },
+    "rio_punch": {
+        "name": "Rio Punch",
+        "category": "Juice",
+        "rarity": "Rare",
+        "image": "/images/rio_punch.webp"
+    },
+    "aussie_lemonade": {
+        "name": "Aussie Lemonade",
+        "category": "Juice",
+        "rarity": "Rare",
+        "image": "/images/aussie_lemonade.webp"
+    },
+    "khaotic": {
+        "name": "Khaotic",
+        "category": "Juice",
+        "rarity": "Rare",
+        "image": "/images/khaotic.webp"
+    },
+    "viking_berry": {
+        "name": "Viking Berry",
+        "category": "Juice",
+        "rarity": "Rare",
+        "image": "/images/viking_berry.webp"
+    },
+    "strawberry_lemonade": {
+        "name": "Strawberry Lemonade",
+        "category": "Rehab",
+        "rarity": "Rare",
+        "image": "/images/strawberry_lemonade.webp"
+    },
+    "tea_lemonade": {
+        "name": "Tea + Lemonade",
+        "category": "Rehab",
+        "rarity": "Rare",
+        "image": "/images/tea_lemonade.webp"
+    },
+    "peach_tea": {
+        "name": "Peach Tea",
+        "category": "Rehab",
+        "rarity": "Rare",
+        "image": "/images/peach_tea.webp"
+    },
+    "wild_berry_tea": {
+        "name": "Wild Berry Tea",
+        "category": "Rehab",
+        "rarity": "Rare",
+        "image": "/images/wild_berry_tea.webp"
+    },
+    "green_tea": {
+        "name": "Green Tea",
+        "category": "Rehab",
+        "rarity": "Rare",
+        "image": "/images/green_tea.webp"
     }
 }
