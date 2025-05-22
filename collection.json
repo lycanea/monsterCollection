@@ -274,5 +274,95 @@
         "category": "Rehab",
         "rarity": "Rare",
         "image": "/images/green_tea.webp"
+    },
+    "m_80": {
+        "name": "M-80",
+        "category": "Regular",
+        "rarity": "Rare",
+        "image": "/images/M_80.png"
+    },
+    "ripper": {
+        "name": "Ripper",
+        "category": "Regular",
+        "rarity": "Rare",
+        "image": "/images/ripper.png"
+    },
+    "mixxd": {
+        "name": "Mixxd",
+        "category": "Regular",
+        "rarity": "Rare",
+        "image": "/images/mixxd.png"
+    },
+    "cuba_lima": {
+        "name": "Cuba Lima",
+        "category": "Regular",
+        "rarity": "Rare",
+        "image": "/images/cuba-lima.webp"
+    },
+    "citron": {
+        "name": "Citron",
+        "category": "Ultra",
+        "rarity": "Rare",
+        "image": "/images/citron.png"
+    },
+    "juiced_ripper": {
+        "name": "Juiced Ripper",
+        "category": "Juice",
+        "rarity": "Rare",
+        "image": "/images/juiced_ripper.webp"
+    },
+    "khaos": {
+        "name": "Khaos",
+        "category": "Regular",
+        "rarity": "Rare",
+        "image": "/images/khaos.png"
+    },
+    "lewis_hamilton": {
+        "name": "Lewis Hamilton",
+        "category": "Sport",
+        "rarity": "Special",
+        "image": "/images/lewis_hamilton.png"
+    },
+    "the_doctor": {
+        "name": "The Doctor",
+        "category": "Sport",
+        "rarity": "Special",
+        "image": "/images/the_doctor.png"
+    },
+    "rob_gronkowski": {
+        "name": "Rob Gronkowski",
+        "category": "Sport",
+        "rarity": "Special",
+        "image": "/images/rob_gronkowski.png"
+    },
+    "killer_b": {
+        "name": "Killer B",
+        "category": "Nitrous",
+        "rarity": "Rare",
+        "image": "/images/killer_b.png"
+    },
+    "anti_gravity": {
+        "name": "Anti Gravity",
+        "category": "Nitrous",
+        "rarity": "Rare",
+        "image": "/images/anti_gravity.webp"
+    },
+    "black_ice": {
+        "name": "Black Ice",
+        "category": "Nitrous",
+        "rarity": "Rare",
+        "image": "/images/black_ice.png"
+    },
+    "ballers_blend": {
+        "name": "Baller's Blend",
+        "category": "Punch",
+        "rarity": "Rare",
+        "image": "/images/ballers_blend.png"
+    },
+    "mad_dog": {
+        "name": "Mad Dog",
+        "category": "Punch",
+        "rarity": "Rare",
+        "image": "/images/mad_dog.png"
     }
 }
