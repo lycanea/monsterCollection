@@ -2,6 +2,8 @@ const collectedFilter = document.getElementById('collected-filter');
 const typeFilter = document.getElementById('type-filter');
 const rarityFilter = document.getElementById('rarity-filter');
 const collection = document.getElementById('collection');
+const collectedCounter = document.getElementById('collected');
+const totalCounter = document.getElementById('total');
 let collectionData = [];
 
 const collected = localStorage.getItem('collected') === null ? localStorage.setItem('collected', JSON.stringify({})) : null;
@@ -18,6 +20,8 @@ let rarityState = 0;
 function renderCollection() {
 	collection.innerHTML = '';
 	const collectedData = JSON.parse(localStorage.getItem('collected')) || {};
+	let countCollected = 0
+	totalCounter.innerHTML = Object.values(collectionData).length;
 	Object.values(collectionData).forEach(item => {
 		// Filtering logic
 		const isCollected = !!collectedData[item.name];
@@ -25,6 +29,7 @@ function renderCollection() {
 			(collectedStates[collectedState] === 'Collected' && !isCollected) ||
 			(collectedStates[collectedState] === 'Uncollected' && isCollected)
 		) return;
+		if (isCollected) countCollected += 1;
 		if (
 			typeStates[typeState] !== 'All' &&
 			item.category !== typeStates[typeState]
@@ -63,6 +68,7 @@ function renderCollection() {
 			});
 		}
 	});
+	collectedCounter.innerHTML = countCollected;
 }
 
 fetch('collection.json')
