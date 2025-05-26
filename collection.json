@@ -353,6 +353,12 @@
         "rarity": "Rare",
         "image": "/images/black_ice.png"
     },
+    "cosmic_peach": {
+        "name": "Cosmic Peach",
+        "category": "Nitrous",
+        "rarity": "Rare",
+        "image": "/images/cosmic_peach.png"
+    },
     "ballers_blend": {
         "name": "Baller's Blend",
         "category": "Punch",
